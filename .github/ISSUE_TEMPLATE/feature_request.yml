@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest something Cuse should be able to do.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task on your Mac, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help?
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which mode would this affect?
+      multiple: true
+      options:
+        - Laya text
+        - Combined text
+        - Gemini realtime voice
+        - Local harness / developer API
+        - Settings & onboarding

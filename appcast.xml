@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Cuse</title>
+        <!-- Cuse releases are published from https://github.com/muneebkhan08/Cuse/releases.
+             scripts/release.sh prepends a new <item> here for each signed build. -->
+    </channel>
+</rss>

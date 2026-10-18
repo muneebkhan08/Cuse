@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Xcode — per-user state never belongs in the repo
+xcuserdata/
+*.xcuserstate
+DerivedData/
+.build/
+.swiftpm/
+
+# release.sh artifacts — large, regenerated each release, never source
+build/
+releases/
+*.xcarchive/
+*.dmg
+
+# Local profiling and JEV experiments
+*.profraw
+harnesses/jev-loop/*.jsonl
+
+# Python (Laya server)
+__pycache__/
+*.pyc
+.venv/
+
+# Node tooling
+node_modules/
+
+# Local-only material: pre-rebrand decks/reports and the demo-video workspace
+docs/*.pdf
+docs/*.pptx
+docs/demo-video/
+
+# Local agent settings
+.claude/settings.local.json

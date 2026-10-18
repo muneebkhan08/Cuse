@@ -1,0 +1,29 @@
+#!/bin/bash
+# Double-click launcher. Opens the newest Cuse build for this repo.
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "$0")/../../.." && pwd)"
+derived_data="${HOME}/Library/Developer/Xcode/DerivedData"
+
+newest_binary=""
+newest_mtime=0
+while IFS= read -r binary; do
+    [[ -n "$binary" ]] || continue
+    modified="$(stat -f '%m' "$binary")"
+    if (( modified > newest_mtime )); then
+        newest_mtime="$modified"
+        newest_binary="$binary"
+    fi
+done < <(find "$derived_data" -path '*/Cuse-*/Build/Products/Debug/Cuse.app/Contents/MacOS/Cuse' -type f 2>/dev/null || true)
+
+if [[ -z "$newest_binary" ]]; then
+    open "$repo_root/Cuse.xcodeproj"
+    osascript -e 'display alert "Cuse has not been built yet" message "Xcode is open. Press Run once, then double-click Start Cuse again."'
+    exit 0
+fi
+
+app_bundle="$(cd "$(dirname "$newest_binary")/../.." && pwd)"
+# Replace a menu-bar copy that is already running so the click always starts fresh.
+pkill -x Cuse >/dev/null 2>&1 || true
+sleep 0.3
+open "$app_bundle"

@@ -1,0 +1,54 @@
+name: Bug report
+description: Something in Cuse didn't work the way it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report this. The more concrete the steps, the faster it gets fixed.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - Laya text (Ctrl+K)
+        - Combined text (Ctrl+L)
+        - Gemini realtime voice (Ctrl+Option)
+        - Not mode-specific
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: The command you gave, what Cuse did, and what you expected instead.
+      placeholder: 'Typed "Click English" on wikipedia.org — Cuse clicked the browser tab instead of the link.'
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Safari on https://www.wikipedia.org
+        2. Press Ctrl+K and type "Click English"
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: Target app
+      description: Which app was frontmost (Safari, Chrome, Finder, an Electron app, …)?
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS 15.3 (Apple Silicon)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant lines from ~/Library/Application Support/Cuse/logs. Remove anything private first.
+      render: shell
