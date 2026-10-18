@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="docs/assets/cuse-hero.png" alt="Cuse — open-source AI cursor agent for macOS: move this, merge those, add that, guide me" width="900" />
+<a href="docs/assets/cuse-demo.mp4"><img src="docs/assets/cuse-demo.gif" alt="Cuse demo: tell your Mac what to click, and Cuse finds it on your screen and does it. Click to watch the full 58-second video." width="900" /></a>
+
+<sub>▶ <a href="docs/assets/cuse-demo.mp4">Watch the full 58-second demo with sound</a></sub>
 
 # Cuse
 
