@@ -263,7 +263,7 @@ Contributions are welcome! Start with **[CONTRIBUTING.md](CONTRIBUTING.md)** and
 
 ## License & credits
 
-[MIT](LICENSE) © Muneeb Khan. Cuse builds on [TipTour](https://github.com/milind-soni/tiptour-macos) by Milind Soni and Clicky by Farza, and uses [CUA](https://github.com/trycua/cua), [Laya](https://huggingface.co/convaiinnovations/laya), [Sparkle](https://sparkle-project.org) and Google Gemini.
+[MIT](LICENSE) © Muneeb Khan.
 
 <div align="center">
 
